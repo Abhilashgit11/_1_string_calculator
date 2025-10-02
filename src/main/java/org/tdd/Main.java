@@ -30,6 +30,9 @@ public class Main {
         int resultWithMultipleDelimiters = stringCalculator.add("//[*][%]\n5*5%2");
         System.out.println("resultWithMultipleDelimiters: " + resultWithMultipleDelimiters);
 
+        int resultWithMultipleDelimitersWithVariableLength = stringCalculator.add("//[***][..][%%]\n5%%5***4%2..3.1");
+        System.out.println("resultWithMultipleDelimitersWithVariableLength: " + resultWithMultipleDelimitersWithVariableLength);
+
         int resultWithNegativeNumbers = stringCalculator.add("//;\n1;-2;3;-4");
         System.out.println("resultWithNegativeNumbers: " + resultWithNegativeNumbers);
 
