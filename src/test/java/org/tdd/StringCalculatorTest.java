@@ -44,7 +44,12 @@ class StringCalculatorTest {
 
     @Test
     void testAddWithNegativeNumber() {
-        assertThrows(IllegalArgumentException.class, () -> stringCalculator.add("-1,2"));
+        assertThrows(IllegalArgumentException.class, () -> stringCalculator.add("//,\n1,2,-3,4"));
+    }
+
+    @Test
+    void testAddWithNumbersGreaterThan1000() {
+        assertEquals(8, stringCalculator.add("//,\n1,1001,3,4"));
     }
 
 }
